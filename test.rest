@@ -1,0 +1,16 @@
+GET http://localhost:8080/api
+
+
+POST http://localhost:8080/token
+Content-Type: application/json
+{
+    "username" : "admin",
+    "password" : "password"
+}
+
+POST http://localhost:8080/about
+Authorization: Bearer <access Token>
+
+
+POST http://localhost:8080/regenerateToken
+Authorization: Bearer <refresh token>
